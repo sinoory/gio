@@ -1,0 +1,2 @@
+cp out/Release/gen/protoc_out/sync/protocol/ ~/wkspace/prj/c/gio/
+cp third_party/protobuf/src/google/ ~/wkspace/prj/c/gio/ -rf

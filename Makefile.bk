@@ -1,0 +1,33 @@
+
+VPATH = .
+
+SOURCES = $(wildcard *.cc)
+
+OBJS := $(patsubst %.cc,%.o, $(SOURCES))
+
+
+
+all: main
+
+
+
+%.d: %.cc
+	@set -e; rm -f $@;\
+	$(CC) -MM  $< > $@.$$$$; \
+	sed 's,/($*/)/.o[ :]*,/1.o $@ : ,g' < $@.$$$$ > $@; \
+	rm -f $@.$$$$
+
+
+
+sinclude $(SOURCES:.cc=.d)
+
+
+
+main:$(OBJS)
+	$(CC) -o main $(OBJS)
+
+
+
+clean:
+	rm -f *.o test *.d
+
