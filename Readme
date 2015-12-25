@@ -1,3 +1,9 @@
 cp out/Release/gen/protoc_out/sync/protocol/ ~/wkspace/prj/c/gio/
 cp third_party/protobuf/src/google/ ~/wkspace/prj/c/gio/ -rf
 cp /home/cosapp/cosie/src/sync/base/sync_export.h sync/base/
+
+
+sin@nfs /mnt/fd/home/sin/prjs/c/gio $ ./configure 
+configure: error: cannot find install-sh, install.sh, or shtool in "." "./.." "./../.."
+>>>.
+sin@nfs /mnt/fd/home/sin/prjs/c/gio $ ln -s /usr/share/automake-1.14/install-sh install-sh
