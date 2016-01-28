@@ -7,3 +7,7 @@ sin@nfs /mnt/fd/home/sin/prjs/c/gio $ ./configure
 configure: error: cannot find install-sh, install.sh, or shtool in "." "./.." "./../.."
 >>>.
 sin@nfs /mnt/fd/home/sin/prjs/c/gio $ ln -s /usr/share/automake-1.14/install-sh install-sh
+
+see core/main.cc for example
+see core/Makefile for compile
+	compile all the *.a one by one manaully ok
